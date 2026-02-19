@@ -1,0 +1,15 @@
+# Install
+pip install pdfplumber pymupdf camelot-py[cv] chromadb pandas ollama
+
+# Setup Ollama
+ollama pull llama3       # or: mistral, phi3, gemma2, qwen2
+ollama serve
+
+# Run pipeline (interactive Q&A after)
+python hybrid_pdf_pipeline.py report.pdf --model llama3
+
+# Single question mode
+python hybrid_pdf_pipeline.py report.pdf --question "What do the tables show about revenue?"
+
+# Skip table summarisation (faster)
+python hybrid_pdf_pipeline.py report.pdf --no-summarize --flavor stream
