@@ -13,3 +13,7 @@ python hybrid_pdf_pipeline.py report.pdf --question "What do the tables show abo
 
 # Skip table summarisation (faster)
 python hybrid_pdf_pipeline.py report.pdf --no-summarize --flavor stream
+
+
+
+python table.py ssrn-3727495.pdf lattice
